@@ -1,0 +1,187 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* --------------------------------
+   Sizes
+-------------------------------- */
+
+.badge--sm {
+  min-height: 24px;
+
+  gap: 4px;
+  padding: 2px 8px;
+
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.badge--md {
+  min-height: 28px;
+
+  gap: 6px;
+  padding: 4px 10px;
+
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+.badge--lg {
+  min-height: 32px;
+
+  gap: 8px;
+  padding: 5px 12px;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* --------------------------------
+   Radius
+-------------------------------- */
+
+.badge--rounded-full {
+  border-radius: var(--radius-full);
+}
+
+.badge--rounded-md {
+  border-radius: var(--radius-md);
+}
+
+/* --------------------------------
+   Icons
+-------------------------------- */
+
+.badge__icon {
+  flex-shrink: 0;
+}
+
+.badge--sm .badge__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.badge--md .badge__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.badge--lg .badge__icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* --------------------------------
+   Icon only
+-------------------------------- */
+
+.badge--icon-only {
+  padding: 0;
+}
+
+.badge--icon-only.badge--sm {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+}
+
+.badge--icon-only.badge--md {
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+}
+
+.badge--icon-only.badge--lg {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+}
+
+/* --------------------------------
+   Variants
+-------------------------------- */
+
+/* subtle standard badge */
+.badge--default {
+  background-color: #f2f4f6;
+  color: #5b3f43;
+  border-color: #e0e3e5;
+}
+
+/* Brand */
+.badge--primary {
+  background-color: #fce4ec;
+  color: #b80049;
+  border-color: #f4dce4;
+}
+
+/* Financial income / positive */
+.badge--success {
+  background-color: #e7f6ec;
+  color: #1f6b3a;
+  border-color: #c8e9d3;
+}
+
+/* Attention */
+.badge--warning {
+  background-color: #fff4d6;
+  color: #825500;
+  border-color: #f3dda4;
+}
+
+/* Errors / expenses / destructive */
+.badge--danger {
+  background-color: #ffdad6;
+  color: #93000a;
+  border-color: #ffb4ab;
+}
+
+/* Informational */
+.badge--info {
+  background-color: #e7f0ff;
+  color: #315b8a;
+  border-color: #cbdcf2;
+}
+
+/* Very understated */
+.badge--neutral {
+  background-color: #eceef0;
+  color: #191c1e;
+  border-color: #d8dadc;
+}
+
+/* --------------------------------
+   Interaction
+-------------------------------- */
+
+.badge--clickable {
+  cursor: pointer;
+}
+
+.badge--clickable:hover {
+  filter: brightness(0.97);
+}
+
+.badge--clickable:active {
+  filter: brightness(0.94);
+}
+
+.badge--clickable:focus-visible {
+  outline: 3px solid rgb(233 30 99 / 20%);
+  outline-offset: 2px;
+}

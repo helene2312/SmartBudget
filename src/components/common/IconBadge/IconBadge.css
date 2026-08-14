@@ -1,0 +1,116 @@
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* --------------------------------
+   Sizes
+-------------------------------- */
+
+.icon-badge--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-badge--md {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-badge--lg {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-badge--xl {
+  width: 56px;
+  height: 56px;
+}
+
+/* --------------------------------
+   Icon sizes
+-------------------------------- */
+
+.icon-badge--sm .icon-badge__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-badge--md .icon-badge__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-badge--lg .icon-badge__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-badge--xl .icon-badge__icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* --------------------------------
+   Radius
+-------------------------------- */
+
+.icon-badge--rounded-md {
+  border-radius: var(--radius);
+}
+
+.icon-badge--rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------
+   Variants
+-------------------------------- */
+
+/* subtle/default */
+
+.icon-badge--default {
+  background-color: var(--surface-container-high);
+  color: var(--on-surface-variant);
+
+  border-color: transparent;
+}
+
+/* primary */
+
+.icon-badge--primary {
+  background-color: var(--secondary-container);
+  color: var(--primary);
+
+  border-color: transparent;
+}
+
+/* secondary */
+
+.icon-badge--secondary {
+  background-color: var(--surface-container-highest);
+  color: var(--on-surface-variant);
+
+  border-color: var(--outline-variant);
+}
+
+/* neutral */
+
+.icon-badge--neutral {
+  background-color: var(--surface-container);
+  color: var(--on-surface);
+
+  border-color: var(--surface-container-highest);
+}

@@ -1,0 +1,195 @@
+.stylebook-section {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+}
+
+/* ADD NEW ACCOUNT CARD */
+
+.card-content_add-new-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 300px;
+
+  text-align: center;
+}
+
+.add-new-account-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  margin-bottom: var(--space-md);
+
+  border-radius: var(--radius-full);
+
+  background-color: var(--surface-container-high);
+
+  transition: background-color 0.2s ease;
+}
+
+.add-new-account-icon {
+  width: 32px;
+  height: 32px;
+
+  color: var(--secondary);
+
+  transition: color 0.2s ease;
+}
+
+.add-new-account-title {
+  margin: 0 0 var(--space-sm);
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: var(--headline-sm-size);
+  font-weight: 600;
+  line-height: var(--headline-sm-line-height);
+
+  color: var(--on-surface);
+
+  transition: color 0.2s ease;
+}
+
+.add-new-account-description {
+  max-width: 200px;
+
+  margin: 0;
+
+  font-family: Inter, sans-serif;
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-line-height);
+
+  color: var(--on-surface-variant);
+}
+
+.card--dashed:hover .add-new-account-icon-container {
+  background-color: var(--primary-fixed);
+}
+
+.card--dashed:hover .add-new-account-icon {
+  color: var(--primary);
+}
+
+.card--dashed:hover .add-new-account-title {
+  color: var(--primary);
+}
+
+/* QUICK ACTIONS CARD */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: var(--space-md);
+}
+
+.quick-action-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.quick-action-card span {
+  color: var(--on-surface);
+  font-size: var(--label-md-size);
+}
+
+.quick-action-card svg {
+  color: var(--secondary);
+}
+
+.quick-action-card:hover svg {
+  color: var(--primary);
+}
+
+.quick-action-card:hover {
+  background-color: var(--surface-container-low);
+  border-color: var(--primary);
+}
+
+/* DETAILED CARD */
+.detailed-card:hover {
+  transform: translateY(-4px);
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+
+.detailed-card-header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.detailed-card-header-text {
+  display: flex;
+  flex-direction: column;
+
+  .detailed-card-header-title {
+    font-size: var(--headline-sm-size);
+    color: var(--on-surface);
+  }
+
+  .detailed-card-header-subtitle {
+    font-size: var(--body-sm-size);
+    color: var(--on-surface-variant);
+  }
+}
+
+.detailed-card-content {
+  padding-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+
+  .detailed-card-content-amount {
+    font-size: var(--headline-lg-size);
+    color: var(--on-background);
+  }
+
+  .detailed-card-content-subtitle {
+    font-size: var(--body-sm-size);
+    color: var(--on-surface-variant);
+  }
+}
+
+.detailed-card:hover {
+  .detailed-card-header-title {
+    color: var(--primary);
+  }
+
+  .detailed-card-footer-text {
+    text-decoration: underline;
+  }
+}
+
+.detailed-card-footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .detailed-card-footer-text {
+    font-size: var(--label-md-size);
+    color: var(--primary);
+  }
+
+  .detailed-card-footer-icon {
+    color: var(--primary);
+  }
+
+  .detailed-card-footer-icon:hover {
+    transform: translateX(0.25rem);
+    transition: transform 0.2s ease;
+  }
+}
