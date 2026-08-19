@@ -25,6 +25,8 @@ import { createEntry } from "../../features/entries/api/create/createEntry";
 import { updateEntry } from "../../features/entries/api/update/updateEntry";
 import { deleteEntryById } from "../../features/entries/api/delete/deleteEntryById";
 import { Button } from "../../components/common/Button";
+import { getUserById } from "../../features/users/api/get/getUserById";
+import { getUserId } from "../../store/userStore";
 
 const TestDashboard: React.FC = () => {
   async function runAction<T>(label: string, action: () => Promise<T>) {
@@ -38,8 +40,7 @@ const TestDashboard: React.FC = () => {
       console.error(`${label} failed:`, error);
 
       window.alert(
-        `${label} failed\n\n${
-          error instanceof Error ? error.message : String(error)
+        `${label} failed\n\n${error instanceof Error ? error.message : String(error)
         }`,
       );
     }
@@ -321,6 +322,24 @@ const TestDashboard: React.FC = () => {
         if (!entryId) return;
 
         runAction("Delete Entry by ID", () => deleteEntryById(entryId));
+      },
+    },
+
+    {
+      label: "Get User By Id",
+      fn: () => {
+        const userId = window.prompt("User ID:");
+
+        if (!userId) return;
+
+        runAction("Get User By Id", () => getUserById(String(userId)));
+      },
+    },
+    {
+      label: "Get User Id",
+      fn: () => {
+
+        runAction("Get User Id", async () => getUserId());
       },
     },
   ];
